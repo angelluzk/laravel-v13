@@ -1,58 +1,237 @@
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+# Boilerplate Profissional (Tailwind v4 Edition)
 
-## About Laravel
+![Laravel](https://img.shields.io/badge/Laravel-13-FF2D20?style=for-the-badge&logo=laravel&logoColor=white)
+[![Documentation](https://img.shields.io/badge/Docs-Laravel_13.x-FF2D20?style=for-the-badge&logo=laravel&logoColor=white)](https://laravel.com/docs/13.x)
+![PHP](https://img.shields.io/badge/PHP-8.3%2B-777BB4?style=for-the-badge&logo=php&logoColor=white)
+![PostgreSQL 16](https://img.shields.io/badge/PostgreSQL-16-336791?style=for-the-badge&logo=postgresql&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_v4-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+[![Build Status](https://github.com/angelluzk/laravel-v13/actions/workflows/laravel.yml/badge.svg)](https://github.com/angelluzk/laravel-v13/actions)
+![Code Style](https://img.shields.io/badge/Code%20Style-Laravel%20Pint-blue)
+![Static Analysis](https://img.shields.io/badge/Static%20Analysis-Larastan-yellow)
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+> **Starter moderno e “Enterprise-Ready” pré-configurado com Tailwind CSS v4, Docker Compose V2, ferramentas de QA, análise estática e CI/CD.**
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+---
 
-## Learning Laravel
+## 📋 Sobre o Projeto
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+Este repositório fornece uma fundação sólida para projetos em **Laravel 13**, já configurado com a stack moderna de mercado (**Tailwind CSS v4**). Focado em qualidade, padronização e ambiente Docker robusto (Sail).
 
-In addition, [Laracasts](https://laracasts.com) contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+---
 
-You can also watch bite-sized lessons with real-world projects on [Laravel Learn](https://laravel.com/learn), where you will be guided through building a Laravel application from scratch while learning PHP fundamentals.
+## 📚 Documentação de Referência
 
-## Agentic Development
+Centralizamos aqui todos os manuais necessários para trabalhar neste projeto:
 
-Laravel's predictable structure and conventions make it ideal for AI coding agents like Claude Code, Cursor, and GitHub Copilot. Install [Laravel Boost](https://laravel.com/docs/ai) to supercharge your AI workflow:
+* **📖 [Documentação Oficial do Laravel 13](https://laravel.com/docs/13.x)** Referência completa sobre o framework, rotas, controllers e segurança.
+
+* **📘 [Guia Técnico do Projeto](./GUIA_TECNICO.md)** Entenda as decisões de arquitetura (Tailwind v4, Docker no Windows).
+
+* **📙 [Conceitos Técnicos & Glossário](./CONCEITOS_TECNICOS.md)** Explicação detalhada sobre Sail, Pint, Larastan, Vite e configurações do PHP.
+
+---
+
+## 🛠️ Tecnologias e Recursos
+
+- **Framework:** Laravel 13  
+- **Linguagem:** PHP 8.3+
+- **Frontend:** Tailwind CSS v4 (via Vite)  
+- **Banco de Dados:** PostgreSQL 16 (Docker)  
+- **Ambiente de Desenvolvimento:** Laravel Sail (Docker Compose V2)  
+- **Code Style:** Laravel Pint (PSR-12)  
+- **Análise Estática:** Larastan (PHPStan – Level 5)  
+- **CI/CD:** GitHub Actions  
+- **Extras:** IDE Helper, Redis, Mailpit
+
+---
+
+## 🚀 Instalação
+
+### ⚙️ Requisitos do Ambiente (php.ini)
+
+Caso você opte por rodar o projeto **sem Docker** (instalação nativa), garanta que as seguintes extensões estejam habilitadas no seu arquivo `php.ini`:
+
+- `ctype`
+- `curl`
+- `dom`
+- `fileinfo`
+- `filter`
+- `hash`
+- `mbstring`
+- `openssl`
+- `pcre`
+- `pdo`
+- `pdo_pgsql` (Driver do Banco de Dados)
+- `session`
+- `tokenizer`
+- `xml`
+
+> **Nota:** Se você estiver usando **Laravel Sail (Docker)**, pode ignorar esta lista. O container já vem com todas essas extensões configuradas e otimizadas automaticamente.
+
+---
+
+### 1. Clone o Repositório
+```bash
+git clone [https://github.com/angelluzk/laravel-v13.git](https://github.com/angelluzk/laravel-v13.git)
+cd laravel-v13
+````
+
+### 2\. Instale as Dependências
+
+#### Opção A — Composer Local
 
 ```bash
-composer require laravel/boost --dev
-
-php artisan boost:install
+composer install
 ```
 
-Boost provides your agent 15+ tools and skills that help agents build Laravel applications while following best practices.
+#### Opção B — Composer via Docker
 
-## Contributing
+```bash
+docker run --rm -u "$(id -u):$(id -g)" \
+  -v "$(pwd):/var/www/html" -w /var/www/html \
+  laravelsail/php83-composer:latest \
+  composer install --ignore-platform-reqs
+```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+### 3\. Configure o Ambiente
 
-## Code of Conduct
+Crie o arquivo .env. Importante: Se estiver no Windows, veja a seção de "Solução de Problemas" abaixo sobre o WWWUSER.
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+```bash
+cp .env.example .env
+```
 
-## Security Vulnerabilities
+No .env, ajuste o banco para PostgreSQL:
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+```bash
+DB_CONNECTION=pgsql
+DB_PORT=5432
 
-## License
+# Se estiver no Windows, adicione também:
+WWWUSER=1000
+WWWGROUP=1000
+```
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+### 4\. Inicialize os Containers
+
+```bash
+./vendor/bin/sail up -d
+# OU, se o comando sail falhar no Windows:
+docker compose up -d
+```
+
+### 5\. Setup Final & Frontend
+
+Gere a chave, migre o banco e compile os assets do Tailwind v4:
+
+```bash
+# Backend Setup
+docker compose exec laravel.test php artisan key:generate
+docker compose exec laravel.test php artisan migrate
+
+# Frontend Setup (Instala e compila Tailwind v4)
+docker compose exec laravel.test npm install
+docker compose exec laravel.test npm run build
+```
+
+Aplicação disponível em:
+**[http://localhost](https://www.google.com/search?q=http://localhost)**
+
+-----
+
+## ❓ Solução de Problemas Comuns (Troubleshooting)
+
+> Erro: **"Unsupported operating system"** ou **Sail não roda**.
+
+Se você usa Windows (Git Bash/Mingw), o script ./vendor/bin/sail pode falhar. Solução: Use os comandos nativos do Docker Compose:
+
+  - Em vez de `sail up`, use `docker compose up`.
+  - Em vez de `sail npm run...`, use `docker compose exec laravel.test npm run...`.
+
+> Erro: **"groupadd: invalid group ID" (Docker build fail)**.
+
+Se o container falhar ao subir com erro de groupadd, é porque o Docker no Windows não detectou seu ID de usuário. Solução: Adicione estas duas linhas ao final do seu arquivo .env:
+
+```bash
+WWWUSER=1000
+WWWGROUP=1000
+```
+
+Depois reconstrua: `docker compose up -d --build`.
+
+-----
+
+## 🛡️ Qualidade e Ferramentas de QA
+
+### 🎨 Formatação — Laravel Pint
+
+```bash
+docker compose exec laravel.test ./vendor/bin/pint
+```
+
+### 🔎 Análise Estática — Larastan
+
+```bash
+docker compose exec laravel.test ./vendor/bin/phpstan analyse
+```
+
+### 🧪 Testes Automatizados
+
+```bash
+docker compose exec laravel.test php artisan test
+```
+
+### 🧠 Atualizar IDE Helper
+
+```bash
+docker compose exec laravel.test php artisan ide-helper:generate
+```
+
+-----
+
+## 🤖 CI/CD — GitHub Actions
+
+O workflow `laravel.yml` executa automaticamente:
+
+1.  Verificação de padrão de código (Pint)
+2.  Análise estática (Larastan)
+3.  Testes completos
+
+Tudo isso ao enviar alterações para a branch `main`.
+
+-----
+
+## 📂 Arquivos Importantes
+
+  * **compose.yaml** — Serviços Docker (App, DB, Redis, Mailpit)
+  * **vite.config.js** — Configuração do Build (Tailwind v4).
+  * **phpstan.neon** — Regras do PHPStan / Larastan
+  * **pint.json** — Configurações do Laravel Pint
+  * **.editorconfig** — Padronização entre editores
+
+-----
+
+## 👩‍🎓 Autoria
+
+<img src="https://github.com/angelluzk.png" width="100px;" alt="Foto de Angel Luz"/>
+
+> Desenvolvido com 💛 por **Angel Luz**.
+
+Se quiser conversar, colaborar ou oferecer uma oportunidade:
+
+📬 E-mail: [contatoangelluz@gmail.com](mailto:contatoangelluz@gmail.com)  
+🐙 GitHub: [@angelluzk](https://github.com/angelluzk)  
+💼 LinkedIn: [linkedin.com/in/angelitaluz](https://www.linkedin.com/in/angelitaluz/)  
+🗂️Website / Portfólio: [meu_portfolio/](https://angelluzk.github.io/meu_portfolio/) 
+
+-----
+
+<div align="center">
+
+> “Transformando código em fluxo, e ideias em movimento.”
+
+</div>
